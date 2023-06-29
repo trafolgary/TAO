@@ -83,6 +83,7 @@ section {
     text-align: center;
     flex-shrink: 0;
     font-weight: 200;
+    margin-top: 40px;
 }
 
 .main_title{
@@ -92,6 +93,12 @@ section {
     transform: translateX(-50%);
 }
 
+.main-list {
+    position: absolute;
+    top: 230px;
+    right: -150px;
+}
+
 .facelift {
     display: flex;
     justify-content: center;
@@ -99,6 +106,7 @@ section {
 }
 
 .main_img {
+    position: relative;
     border-radius: 50%;
     border: 1px solid #E595A8;
     padding: 30px;
