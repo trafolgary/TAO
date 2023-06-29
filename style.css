@@ -856,6 +856,7 @@ section {
     line-height: 200%;
     width: 60%;
     margin: 0px auto;
+    margin-bottom: 50px;
 }
 
 .specialist {
@@ -887,6 +888,24 @@ section {
     font-size: 16px;
     font-family: Open;
     line-height: 200%;
+}
+
+.arrow-specialist-l,
+.arrow-specialist-r {
+    position: absolute;
+    top: 30%;
+}
+
+.arrow-specialist-l {
+    left: -75px;
+}
+
+.arrow-specialist-r {
+    right: -75px;
+}
+
+#specialists .swiper-nav {
+    display: none;
 }
 
 .specialist-btn {
@@ -1189,13 +1208,32 @@ section {
     display: none;
 }
 
+.arrow-specialist-l,
+.arrow-specialist-r {
+    position: absolute;
+}
+
 @media screen and (max-width: 1300px) {
     .container {
         max-width: 1280px;
     }
 
+    .more-methods-svg {
+        max-width: 450px;
+        margin: 0px auto;
+    }
+
     .before_after-grid {
         column-gap: 30px;
+    }
+
+    #before_after .container.mobile {
+        background-color: #FFF;
+    }
+
+    .before_after-item-btn {
+        background-color: #E595A8;
+        height: 97%;
     }
 
     .arrow-review {
@@ -1205,15 +1243,6 @@ section {
     .review-nav {
         display: flex;
     }
-
-    /*---------------------------------swiper-----------------------------------*/
-
-    #result,
-    #before_after {
-        display: none;
-    }
-
-    /*---------------------------swiper---------------------*/
 
     #main {
         padding-top: 10px;
@@ -1422,19 +1451,112 @@ section {
     .methods-list {
         display: none;
     }
-
-    .advantages {
-        overflow: hidden;
-    }
-
-    .advantages .container {
-        padding: 34px 20px;
-    }
-
+    
     .advantage {
+        padding: 34px 20px;
         flex-direction: column;
         width: 100%;
         align-items: flex-start;
+        background-color: #6055C0;
+    }
+
+    .advantage-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .advantage-list p {
+        color: #FFF;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 162%;
+    }
+
+    .advantage-list ol {
+        padding-left: 20px;
+    }
+
+    .advantage-list li {
+        color: #FFF;
+        font-size: 20px;
+        font-family: Open;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 162%;
+    }
+
+    .swiper-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    #effectiveness .swiper-nav {
+        margin-top: 22px;
+    }
+
+    #correction_zones .container.mobile {
+        background-color: #FFF;
+    }
+
+    #correction_zones .swiper-nav {
+        position: absolute;
+        left: 50%;
+        top: 460px;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .zone-img {
+        width: 100%;
+    }
+
+    .zone-img img {
+        object-fit: cover;
+        width: 100%;
+        height: 450px;
+    }
+
+    #correction_zones .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .zone-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .zone-container p {
+        text-align: center;
+        padding: 0px 20px;
+        color: #6055C0;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+    }
+
+    .zone-line {
+        color: #6055C0;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        padding: 20px;
+        border-bottom: 1px solid #E595A8;
+        border-top: 1px solid #E595A8;
     }
 
     .procedure {
@@ -1448,6 +1570,56 @@ section {
 
     .procedure-table {
         display: none;
+    }
+
+    #result .container.mobile {
+        background: #E595A8;
+    }
+
+    #result .swiper-nav {
+        position: absolute;
+        top: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 22px;
+        padding-top: 10px;
+    }
+
+    .result-img-m {
+        width: 100%;
+        height: 250px;
+    }
+
+    .result-img-m img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .result-desc-m {
+        margin-top: 54px;
+        padding: 0px 24px;
+        margin-bottom: 74px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .result-desc-m span {
+        color: #FFF7ED;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 200%;
+    }
+
+    .result-desc-m p {
+        color: #FFF7ED;
+        text-align: justify;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 162%;
     }
 
     .lifting-text {
@@ -1622,6 +1794,10 @@ section {
         display: none;
     }
 
+    #reviews {
+        margin-bottom: 0px;
+    }
+
     #reviews .container {
         padding: 0px;
     }
@@ -1649,10 +1825,6 @@ section {
     }
 
     .arrow-review {
-        display: none;
-    }
-
-    .swiper-slide {
         display: none;
     }
 
@@ -1692,6 +1864,11 @@ section {
 
     .container.mobile {
         position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0px;
+        background-color: #6055C0;
     }
 
     .more-methods-text {
@@ -1726,22 +1903,37 @@ section {
         text-align: left;
     }
 
-    .container.mobile {
-        display: block;
-        padding: 0px;
+    .specialist {
+        margin-bottom: 75px;
+    }
+
+    #specialists .swiper-nav {
+        display: flex;
+        position: absolute;
+        top: 325px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
     }
 
     .specialists-desc {
         width: 100%;
         margin: 20px 0px;
+        margin-bottom: 30px;
+    }
+
+    .arrow-specialist-r,
+    .arrow-specialist-l {
+        display: none;
     }
 
     .specialists-swiper .swiper-slide {
-        text-align: center;
+        text-align: left;
     }
 
     .specialist-btn {
         width: 100%;
+        max-width: 300px;
     }
 
     .container.row {
